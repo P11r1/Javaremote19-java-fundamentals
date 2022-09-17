@@ -59,7 +59,7 @@ public class Operator {
       int divide = 40 / 5; // quotient value ( jagamise vastus ) 40 : 5 = 8
         System.out.println(divide);
 
-        int modulo = 40 % 5; // Reminder value ( ülejääk ) 5 * 8 = 40, 40 - 40 = 0, seega jääk on 0! (% - modulo)
+        int modulo = 40 % 7; // Reminder value ( ülejääk ) 5 * 8 = 40, 40 - 40 = 0, seega jääk on 0! (% - modulo)
         System.out.println(modulo);
         /*
         30 % 4 = 2 ( 4 * 7 = 28, 30 - 28 = 2) lähim väärtus/ ülejääk
@@ -67,7 +67,7 @@ public class Operator {
          */
 
 
-        //Comparison operators(==, !=,
+        //Comparison operators(==, !=, >, <, >=, <=)
         // always compare variables with same data type
         boolean result = divide == modulo; //8==5 equals
         System.out.println(result);
@@ -75,16 +75,15 @@ public class Operator {
         boolean result2 = divide != modulo; //8!=5 not equals
         System.out.println(result2);
 
-        boolean lessCheck = divide < modulo;
+        boolean lessCheck = divide < modulo; // 8 < 5 lesser than
         System.out.println(lessCheck);
 
-        boolean greaterCheck = divide > modulo;
+        boolean greaterCheck = divide > modulo; // 8 > 6 greater than
         System.out.println(greaterCheck);
 
-        boolean lessEquals = divide <= modulo;
+        // less than or equals
+        boolean lessEquals = divide <= modulo; // 8 <= 5 lesser than or equals
         System.out.println(lessEquals);
-
-
 
 
         // logical operators (&&, ||) - and, or
@@ -94,21 +93,24 @@ public class Operator {
             false && false = false
             true && true = true
          */
-        boolean andCheck = (8 < 9) && (10 > 4);
+        boolean andCheck = (8 < 9) && (10 > 4); // Always use brackets
         System.out.println(andCheck);
 
         /*
         true || true = true
-        false || false = false
         true || false = true
         false || true = true
+        false || false = false
         */
         boolean orCheck = (8 < 9) || (10 > 4);
         System.out.println(orCheck);
 
-        //xAnd, XOR
-/*
- 1 = 00000001;
+        float expo = 5 ^ 6; //(eksponent, pmst korrutis nagu 5 x 5 x 5, 5 ülesse 3)
+
+
+        // ^ = XOR
+        /*
+        1 = 00000001;
         2 = 00000010;
         3 = 00000011;
         4 = 00000100;
@@ -121,14 +123,15 @@ public class Operator {
         11 = 00001011;
         12 = 00001100;
         13 = 00001101;
- */
 
-        // 0 = false
-        // 1 = true
-        // true ^ false = true
-        // false ^ true = true
-        // true ^ true = false
-        // false ^ false = false
+
+         0 = false
+         1 = true
+         true ^ false = true
+         false ^ true = true
+         true ^ true = false
+         false ^ false = false
+        */
 
         float expo = 12 ^ 25; // 12 = 0001100, 25 = 00011001
         System.out.println(expo);
@@ -146,7 +149,7 @@ public class Operator {
         x += y;
 
 
-        //ternary operators 3 variable (?, :)
+        //ternary operators 3 variable (?, :) ( ?, : means true and if else)
         String ternary = (8 > 10) ? "Cat" : "Dog";
         System.out.println(ternary);
 
