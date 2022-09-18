@@ -16,7 +16,7 @@ public class Homework {
         int z = i + b * c;
 
 
-        int r = (a / b) + a * z - (-a) + (+i) % z - (c++) - (c--); // your expression here
+        int r = (a / b) + a * z - (-a) + (+i) % z - (c++) - (c--); //your expression here
         /*
         Order of Precedence
         1.(c++)
