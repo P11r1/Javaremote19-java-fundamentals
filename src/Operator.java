@@ -4,10 +4,7 @@
  * @author Marko
  */
 public class Operator {
-
     // Operators
-
-
     public static void main(String[] args) {
 
 
@@ -36,8 +33,9 @@ public class Operator {
         int x = i + (-j); // x = i - j; 2 - 9 ( plus into minus is minus)
         System.out.println(x);
 
+
         //binary operator (operator with 2 variables)
-        //arithemtic operators
+        //arithmetic operators
         int a = 4;
         int b = 20;
         int c = a + b;
@@ -49,17 +47,18 @@ public class Operator {
         float z = i * a + (c / b) - (-j) % x; // (-j) first because unary
         /*
         1. z = i * a + (c / b) + j % x; minus into minus is plus
-        2. z =
+        2. z = (c / b) + i * a + j % x;
+        3. z
          */
 
 
         System.out.println(z);
 
 
-      int divide = 40 / 5; // quotient value ( jagamise vastus ) 40 : 5 = 8
+        int divide = 40 / 5; // quotient value ( jagamise vastus ) 40 : 5 = 8
         System.out.println(divide);
 
-        int modulo = 40 % 7; // Reminder value ( ülejääk ) 5 * 8 = 40, 40 - 40 = 0, seega jääk on 0! (% - modulo)
+        int modulo = 40 % 5; // Remainder value ( ülejääk ) 5 * 8 = 40, 40 - 40 = 0, seega jääk on 0! (% - modulo)
         System.out.println(modulo);
         /*
         30 % 4 = 2 ( 4 * 7 = 28, 30 - 28 = 2) lähim väärtus/ ülejääk
@@ -105,7 +104,7 @@ public class Operator {
         boolean orCheck = (8 < 9) || (10 > 4);
         System.out.println(orCheck);
 
-        float expo = 5 ^ 6; //(eksponent, pmst korrutis nagu 5 x 5 x 5, 5 ülesse 3)
+        //float expo = 5 ^ 6; //(eksponent, pmst korrutis nagu 5 x 5 x 5, 5 ülesse 3)
 
 
         // ^ = XOR
@@ -156,7 +155,7 @@ public class Operator {
         int ternaryCheck = (x > y) && (a >= b) ? 5 : 1;
         System.out.println(ternaryCheck);
 
-        int check2 = !lessCheck ? 9 : 10;
+        int check2 = !lessCheck ? 9 : 10; // i can use ! as a unary operator
 
         //number comparison
         boolean checkNumber = 9 == 9.0; // int == float
