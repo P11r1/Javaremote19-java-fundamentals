@@ -22,9 +22,11 @@ public class Homework3 {
         //Homework 3: one line for FIZZBUZZ
 
 
-
+/*        Incorrect but almost, just some brackets are misplaced
         System.out.println ((j % 3 == 0 && j % 5 == 0) ? "FIZZBUZZ" : (j % 3 == 0) ? "FIZZ" : (j % 5 == 0) ? "BUZZ": " ");
 
+ */
+        System.out.println ((j % 3 == 0 && j % 5 == 0) ? "FIZZBUZZ" : (j % 3 == 0 ? "FIZZ" : (j % 5 == 0 ? "BUZZ": " ")));
 
     }
 }
