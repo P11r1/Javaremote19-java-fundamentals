@@ -15,14 +15,14 @@ public class Array {
         //int array
         int[] b = {9, 27, 40, 35, 839, 11000}; // That's called array, only same type( not float, double..)
         //String array     //0            1          2
-        String[] fruits = {"apple", "orange", "pineapple", "", "banana", "439539"}; // index = 0, 1, 2
+        String[] fruits = {"apple", "orange", "pineapple", "", "banana", "439539"}; // index = 0, 1, 2 (index means numeric value)
 
         System.out.println(fruits[0]);
         System.out.println(b[4]);
         System.out.println(fruits[3]); //Array index out of band
 
         System.out.println(b.length); // returns the number of values in the array
-
+        //length shows how many elements in the array, index shows the place
         System.out.println(b.length - 1); // returns arrays last index
 
         // Defined array
