@@ -1,3 +1,5 @@
+package exercises;
+
 public class FizzBuzz {
     public static void main(String[] args) {
         int j = 15;
@@ -11,6 +13,6 @@ public class FizzBuzz {
         }
 
         //solution 2
-        //Homework 3: one line for FIZZBUZZ
+        //Homeworks.Homework 3: one line for FIZZBUZZ
     }
 }

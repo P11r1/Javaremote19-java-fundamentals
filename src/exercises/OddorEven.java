@@ -1,3 +1,5 @@
+package exercises;
+
 public class OddorEven {
     // Odd or even number
     public static void main(String[] args) {

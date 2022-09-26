@@ -1,3 +1,5 @@
+package examples;
+
 /**
  * Examples of primitive data types
  *
@@ -35,7 +37,7 @@ public class Datatype {
 
 
     // Non-primitive data types capital letter
-    String word = "I'm a developer"; // Strind for words, always double quotes
+    String word = "I'm a developer"; // String for words, always double quotes
     Character random = 'u';
     Integer number = 5;
     Float numberSecond = 2.45F;

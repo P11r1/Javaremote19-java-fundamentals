@@ -1,3 +1,5 @@
+package examples;
+
 /**
  * Examples of Arrays
  *
@@ -10,7 +12,7 @@ public class Array {
         int a = 9;
 
         // Single-Dimensional array
-        //Note: Array index always start with 0
+        //Note: examples.Array index always start with 0
         // infinite array
         //int array
         int[] b = {9, 27, 40, 35, 839, 11000}; // That's called array, only same type( not float, double..)
@@ -19,7 +21,7 @@ public class Array {
 
         System.out.println(fruits[0]);
         System.out.println(b[4]);
-        System.out.println(fruits[3]); //Array index out of band
+        System.out.println(fruits[3]); //examples.Array index out of band
 
         System.out.println(b.length); // returns the number of values in the array
         //length shows how many elements in the array, index shows the place
