@@ -26,7 +26,8 @@ public class Array {
         System.out.println(b.length - 1); // returns arrays last index
 
         // Defined array
-        String[] veggies = new String[5]; // new object
+        String[] veggies = new String[5]; // new object, the number in the brackets shows how many elements can be in the array
+
 
         veggies[3] = "potato";
         veggies[4] = "carrot";
@@ -44,7 +45,7 @@ public class Array {
         //conventional for-loop
         for(int i=0; i < fruits.length; i++) { // i = index of array
             System.out.println(fruits[i]);
-        }
+        } //Index start with 0, then checks length, then check index 0(apple), then i++( increments) and then i(index) = 1
 
 
         //enhanced for-loop, works only for arrays and list mostly
@@ -54,7 +55,9 @@ public class Array {
 
         //Find the largest element in the array
         // brute force method
-        int result = b[0]; // result 9
+
+        //int[] b = {9, 27, 40, 35, 839, 11000};
+        int result = b[0]; // result 9, Assume that the first is largest, then start comparing
 
         for(int x: b) {
             if(x > result){
