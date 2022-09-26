@@ -1,6 +1,8 @@
+package homeworks;
+
 /**
  *
- * Homework, Operators, Order of Precedence
+ * Homeworks.Homework, Operators, Order of Precedence
  *
  * @author Marko
  */
