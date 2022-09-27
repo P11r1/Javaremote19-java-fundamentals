@@ -2,6 +2,7 @@
  * To find the second largest element in array
  *
  * @author Marko
+ *
  */
 public class ArrayHomework6B {
     public static void main(String[] args) {
