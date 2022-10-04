@@ -16,9 +16,18 @@ public class IntegerDisplay {
         System.out.println("Enter the number to print:");
         int number = scanner.nextInt();
 
-        System.out.println("Numbers:");
-        System.out.println(number + ", " + number + number + ", " + number + number + number + ", " + number + number + number + number);
-        System.out.println();
+        System.out.println("Numbers in order:");
+
+        //Method 1 (baby method)
+       // System.out.println(number + ", " + number + number + ", " + number + number + number + ", " + number + number + number + number);
+
+
+        //Method 2
+        int a = number;
+        for (int i = 1; i <= 4; i++) {
+            System.out.print(a + ", ");
+            a = a * 10 + number;
+        }
     }
 
 }
