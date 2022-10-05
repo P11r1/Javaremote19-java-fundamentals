@@ -19,15 +19,21 @@ public class IntegerDisplay {
         System.out.println("Numbers in order:");
 
         //Method 1 (baby method)
-       // System.out.println(number + ", " + number + number + ", " + number + number + number + ", " + number + number + number + number);
+        // System.out.println(number + ", " + number + number + ", " + number + number + number + ", " + number + number + number + number);
 
 
         //Method 2
-        int a = number;
-        for (int i = 1; i <= 4; i++) {
-            System.out.print(a + ", ");
-            a = a * 10 + number;
+
+        for (int i = 1; i <= number; i++) { // to print number of times/lines
+            for (int j = 1; j <= i; j++) {  // to print number of digits
+                System.out.print(number);
+
+            }
+            System.out.println();
+            // System.out.print(a + ", ");
+            //a = a * 10 + number;
         }
     }
-
 }
+
+
