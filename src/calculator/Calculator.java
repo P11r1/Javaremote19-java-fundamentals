@@ -34,11 +34,7 @@ public class Calculator {
 
         float result = 0;
 
-        switch(operationChoise) {
-            case 1:
-                Add add = new Add();
-                result = add.addArray(inputArray);
-                break;
+        switch (operationChoise) {
             case 2:
                 Subtract subtract = new Subtract();
                 result = subtract.subtractArray(inputArray);

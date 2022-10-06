@@ -49,9 +49,22 @@ public class Shopping {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose any product to add to cart");
         int productChoice = scanner.nextInt();
+        int[] inputArray = new int[productChoice];
 
-        Product[] cart = {};
 
-        cart[0] = products[productChoice];
+
+        for (int i = 0; i < products.length; i++) {
+            inputArray[i] = scanner.nextInt();
+        }
+
+
+
+        Product[] cart = {fruit1, vegetable, food, chocolate, protein};
+
+
+
+        cart[5] = products[productChoice];
+
+        System.out.println(cart);
     }
 }
