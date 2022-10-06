@@ -1,8 +1,34 @@
 package homework;
 
 public class Multiply {
-    public static void main(String[] args) {
-        int[] multiply = {8, 45, 7, 35};
+
+    public float multiplyArray(float[] inputArray) {
+            float result = 1;
+
+            for (float input: inputArray) { // {1, 2, 3}
+                result *= input; // result = result + input
+            }
+
+            return result;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    public float addArray(float[] multiply) {
+
         int sum = 1;
         for (int i = 0; i < multiply.length; i++) {
             sum = sum * multiply[i];
@@ -12,3 +38,4 @@ public class Multiply {
         System.out.println(sum);
     }
 }
+*/
