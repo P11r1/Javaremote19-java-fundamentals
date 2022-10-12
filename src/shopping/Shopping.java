@@ -58,7 +58,7 @@ public class Shopping {
                 ProductLine[] products = new ProductLine[cartLimit]; // can hold only 5 products
 
                 do {
-                    if (counter >= cartLimit) {
+                    if (counter >= cartLimit) { // this checks if cart limit reaches 5 then prints "Your limit.."
                         System.out.println("Your limit has been reached. Please proceed to pay!");
                         break;
                     }
@@ -96,27 +96,6 @@ public class Shopping {
 
                 mainMenu(cart);
                     break;
-
-
-                //Shopping cart
-                /*
-                1. display the cart menu
-                2. get option from the user
-                3. based on the operation, you will do the operation for cart
-
-                show cart:
-                1. Display all the products(productLine) added to the cart
-                2. total sum
-
-                do you want to go back to the cart menu? (true/false)
-                If true -> go to cart menu
-                if false -> do you want to pay(true/false)
-
-                if true -> payment successful, go back to cart menu
-                if false-> go back to cart menu
-
-                if payment successful, then cart should not have any products inside,total price 0
-                 */
 
             case 2:
 
@@ -163,7 +142,7 @@ public class Shopping {
             return null;  // No product is selected
         } else {
             System.out.println("Enter quantity:");
-            Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in); // (1)goes to infinite loop
             float quantity = 0;
             String errorMessage = "Incorrect quantity. Please enter again:";
 
@@ -176,6 +155,7 @@ public class Shopping {
                         System.out.println(errorMessage);
                     }
                 }
+
             } while (quantity <= 0);
 
 
@@ -191,6 +171,25 @@ public class Shopping {
 
         }
     }
+    //Shopping cart
+                /*
+                1. display the cart menu
+                2. get option from the user
+                3. based on the operation, you will do the operation for cart
+
+                show cart:
+                1. Display all the products(productLine) added to the cart
+                2. total sum
+
+                do you want to go back to the cart menu? (true/false)
+                If true -> go to cart menu
+                if false -> do you want to pay(true/false)
+
+                if true -> payment successful, go back to cart menu
+                if false-> go back to cart menu
+
+                if payment successful, then cart should not have any products inside,total price 0
+                 */
      private static Cart cartMenu(Cart cart) {
         Scanner scanner = new Scanner(System.in);
         int cartMenuOption = displayCartMenu();
