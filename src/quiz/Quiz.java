@@ -19,21 +19,26 @@ import java.util.Scanner;
  * Dipslay question to user like this
  * a. What is the capital city of Estonia
  * 1. Tallinn
- * 2 Tartu
+ * 2. Tartu
  * 3. Parnu
  * 4. Viljandi
  * Enter you answer
  * Invalid answer, please enter the option only
  * <p>
- * b. What
+ * b. What...
  * <p>
  * Total score:
  * The correct answers:
  * a. Tallinn
  * b. right answer..
  *
+ * Homework:
+ * 1. Display the correct answer for each question
+ * 2. Calculate total score
+ *
  * @author Marko
  */
+
 public class Quiz {
     public static void main(String[] args) {
 
@@ -42,13 +47,14 @@ public class Quiz {
 
         int totalScore = 0;
         int rightAnswer = 1;
-        int wrongAnswer = 0;
-        boolean hasPassed = false;
+        boolean hasPassed;
 
 
         Question[] questions = getRandomQuestion();
         Answers[] userAnswers = new Answers[questions.length];
 
+
+        // Display questions and options
         for (int j = 0; j < questions.length; j++) {
             Question question = questions[j];
             System.out.println(question.getDescription());
@@ -58,6 +64,8 @@ public class Quiz {
             }
 
             System.out.println("Choose option from above:");
+
+            //Creating a user answer object and assign it to the userAnswer array
             Answers answer = new Answers();
             answer.setQuestionId(question.getId());
             answer.setCorrectOptionIndex(getAnswerOption(question.getOptions().length));
@@ -67,15 +75,14 @@ public class Quiz {
 
         Answers[] correctAnswers = getAnswers();
 
+        //Total score calculation: Compare answerOptions of correctAnswer and the userAnswer
         for (Answers correctAnswer : correctAnswers) {
-            for (int j = 0; j < userAnswers.length; j++) {
-                if(correctAnswer.getQuestionId() == userAnswers[j].getQuestionId() && correctAnswer.getCorrectOptionindex == userAnswers[j].getCorrectOptionIndex()) {
-                    totalScore += rightAnswer;
-                }
+            for (Answers userAnswer : userAnswers) {
+                if (correctAnswer.getQuestionId() == userAnswer.getQuestionId() && correctAnswer.getCorrectOptionIndex() == userAnswer.getCorrectOptionIndex()) {
+                } totalScore += rightAnswer;
             }
-            Answers[] correctAnswer = correctAnswers[j];
-
         }
+
 
         System.out.println("Total score: " + totalScore);
 
@@ -90,12 +97,12 @@ public class Quiz {
         Question question1 = new Question();
         question1.setId(10000L);
         question1.setDescription("What is the capital of Estonia?");
-        question1.setOptions(new String[]{"1. Tartu \n2. Narva \n3. Tallinn \n4. Viljandi"});
+        question1.setOptions(new String[]{"Tartu", "Narva", "Tallinn", "Viljandi"});
 
         Question question2 = new Question();
         question2.setId(100001L);
         question2.setDescription("What is Estonia's native language?");
-        question2.setOptions(new String[]{"1. English \n2. Finnish \n3. Russian \n4. Estonian"});
+        question2.setOptions(new String[]{"English", "Finnish", "Russian", "Estonian"});
 
         Question question3 = new Question();
         question3.setId(10005L);
@@ -110,7 +117,7 @@ public class Quiz {
         Answers answer1 = new Answers();
         answer1.setId(2000L);
         answer1.setQuestionId(10000L);
-        answer1.setCorrectOptionIndex(3);
+        answer1.setCorrectOptionIndex(2);
 
         Answers answer2 = new Answers();
         answer2.setId(2001L);
