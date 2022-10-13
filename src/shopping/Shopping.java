@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ *
+ * @author Marko
+ *
  * Create class Product, it should contain at least two fields – name and price.
  * Create an empty array of Products – it’s size should be at least 5.
  * Populate the array with some products - this array represents the menu for the user.
