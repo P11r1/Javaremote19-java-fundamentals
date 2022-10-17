@@ -3,6 +3,8 @@ package quiz;
 
 import shopping.Product;
 
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -47,6 +49,7 @@ public class Quiz {
 
         int totalScore = 0;
         int rightAnswer = 1;
+        int wrongAnswer = 0;
         boolean hasPassed;
 
 
@@ -76,10 +79,12 @@ public class Quiz {
         Answers[] correctAnswers = getAnswers();
 
         //Total score calculation: Compare answerOptions of correctAnswer and the userAnswer
-        for (Answers correctAnswer : correctAnswers) {
-            for (Answers userAnswer : userAnswers) {
-                if (correctAnswer.getQuestionId() == userAnswer.getQuestionId() && correctAnswer.getCorrectOptionIndex() == userAnswer.getCorrectOptionIndex()) {
-                } totalScore += rightAnswer;
+        for (Answers userAnswer : userAnswers) {
+            for (Answers correctAnswer : correctAnswers) {
+                if (Objects.equals(correctAnswer.getQuestionId(), userAnswer.getQuestionId())) {
+                    totalScore += correctAnswer.getCorrectOptionIndex() == userAnswer.getCorrectOptionIndex() ? rightAnswer : wrongAnswer;
+                    break;
+                } 
             }
         }
 
@@ -87,10 +92,15 @@ public class Quiz {
         System.out.println("Total score: " + totalScore);
 
         // pass score 50%
-        hasPassed = totalScore >= questions.length / 2;
+        hasPassed = totalScore >= (double) questions.length / 2;
 
         System.out.println(hasPassed ? "PASSED" : "FAILED");
-    }
+
+        // Display questions and right answers
+
+
+        }
+
 
 
     private static Question[] getRandomQuestion() {
@@ -106,7 +116,7 @@ public class Quiz {
 
         Question question3 = new Question();
         question3.setId(10005L);
-        question3.setDescription("How many wonders in the world");
+        question3.setDescription("How many wonders in the world?");
         question3.setOptions(new String[]{"3", "9", "7"});
 
 
@@ -153,6 +163,10 @@ public class Quiz {
         } while (option > limit);
 
         return option;
+
+       // private static void printCorrectAnswers(Question[] questions, Answer[] correctAnswers) {
+
+
     }
 }
 
