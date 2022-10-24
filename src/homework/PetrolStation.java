@@ -21,13 +21,11 @@ public class PetrolStation {
         double price = 1.89;
 
 
-
-
         System.out.println("PETROL STATION \n---------------");
         System.out.println("Refilling");
 
         System.out.println("Do you want to continue refilling?");
-        boolean isContinue  = scanner.nextBoolean();
+        boolean isContinue = scanner.nextBoolean();
 
         double totalAmount = 0;
         int totalLitres = 0;
@@ -39,7 +37,7 @@ public class PetrolStation {
             totalAmount = totalLitres * price;
 
             System.out.println("TotalLitres: " + totalLitres + "L");
-            System.out.println("Total amount: " + totalAmount + " EUR");
+            System.out.println("Total amount: " + totalAmount + " Eur");
 
             System.out.println("Do you want to continue?");
             isContinue = scanner.nextBoolean();
@@ -47,24 +45,16 @@ public class PetrolStation {
 
         }
 
-        System.out.println("Do you want to pay");
+        System.out.println("Do you want to pay?");
         isContinue = scanner.nextBoolean();
 
         while (isContinue) {
             if (scanner.nextBoolean()) {
-                System.out.println("Pay" + totalAmount);
+                System.out.println("Amount to be paid: " + totalAmount);
             } else {
-                if (!scanner.nextBoolean()) {
-                    System.out.println("Refilling");
-                    totalLitres += petrol;
-                    totalAmount = totalLitres * price;
-
-                }
+                System.out.println("Invalid option. Please enter again!");
             }
-
         }
-
-
 
     }
 
