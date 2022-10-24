@@ -96,7 +96,7 @@ public class Quiz {
 
         System.out.println(hasPassed ? "PASSED" : "FAILED");
 
-        // Display questions and right answers
+        printCorrectAnswers(questions, correctAnswers);
 
 
         }
@@ -163,10 +163,24 @@ public class Quiz {
         } while (option > limit);
 
         return option;
-
-       // private static void printCorrectAnswers(Question[] questions, Answer[] correctAnswers) {
-
-
     }
+
+        private static void printCorrectAnswers(Question[] questions, Answers[] correctAnswers) {
+            System.out.println("CORRECT ANSWERS:");
+            for (int i = 0; i < questions.length; i++) {
+                System.out.println((i + 1) + ". " + questions[i].getDescription());
+
+                for (Answers answers : correctAnswers) {
+                    if (Objects.equals(questions[i].getId(), answers.getQuestionId())) {
+                        System.out.println("Answer: " + questions[i].getOptions()[answers.getCorrectOptionIndex()]);
+                        break;
+                    }
+                }
+                System.out.println();
+            }
+        }
+
+
 }
+
 

@@ -20,7 +20,7 @@ public class Calculator {
         System.out.println("1. Add\n2. Subtract\n3. Multiply\n4. Divide");
 
         System.out.println("Choose any operation above:");
-        int operationChoise = scanner.nextInt();
+        int operationChoice = scanner.nextInt();
 
         System.out.println("How many numbers you want operate?");
         int totalNumbers = scanner.nextInt();
@@ -34,7 +34,7 @@ public class Calculator {
 
         float result = 0;
 
-        switch (operationChoise) {
+        switch (operationChoice) {
             case 2:
                 Subtract subtract = new Subtract();
                 result = subtract.subtractArray(inputArray);
