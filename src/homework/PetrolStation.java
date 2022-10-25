@@ -57,30 +57,6 @@ public class PetrolStation {
         }
 
     }
-
-
-    private static int oOption(int limit) {
-        Scanner scanner = new Scanner(System.in);
-        String cOption = "Do you want to continue?";
-        String fOption = "Do you want to finish?";
-
-        int option = limit + 1;
-
-        do {
-            if (!scanner.hasNextInt()) {
-                System.out.println(cOption);
-                scanner.next();
-            } else {
-                option = scanner.nextInt(); // correct input
-
-                if (option > limit) {
-                    System.out.println(fOption);
-                }
-            }
-
-        } while (option > limit);
-
-        return option;
-    }
-
 }
+
+
